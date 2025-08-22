@@ -1,0 +1,121 @@
+"use client";
+import { useState } from "react";
+import { ChevronDown, ChevronRight, Menu, Home } from "lucide-react";
+import { navigationItems } from "@/constants";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuItem,
+  DropdownMenuSubContent,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
+import { Button } from "../ui/button";
+import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+
+export default function BrowseCategories() {
+  return (
+    <div className="relative flex justify-end">
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="bg-black text-white  flex items-center hover:cursor-pointer font-normal py-4 text-sm font-rubik"
+          >
+            <Menu className="w-5 h-5" />
+            Browse Categories
+            <ChevronDown className="w-4 h-4" />
+          </Button>
+        </DropdownMenuTrigger>
+
+        <AnimatePresence>
+          <DropdownMenuContent
+            align="start"
+            sideOffset={1}
+            className="w-64 bg-white border border-color"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4 }}
+            >
+              {navigationItems.map((item, i) =>
+                item.dropdownItems ? (
+                  <DropdownMenuSub key={i}>
+                    <DropdownMenuSubTrigger className="flex w-full justify-between items-center border-b border-color py-4 px-2">
+                      <ul className="list-disc pl-5">
+                        <li className="text-sm font-light font-rubik text-muted ">
+                          {item.title}
+                        </li>
+                      </ul>
+                    </DropdownMenuSubTrigger>
+
+                    <DropdownMenuSubContent className="bg-white border-b-3 border-b-[#CEA45F]">
+                      {"group" in item.dropdownItems[0] ? (
+                        <div className="grid grid-cols-3 gap-4 p-2 bg-white ">
+                          {item.dropdownItems.map((group: any, idx: number) => (
+                            <div key={idx}>
+                              <p className="font-semibold mb-2">
+                                {group.group}
+                              </p>
+                              <ul className="space-y-2">
+                                {group.items.map((sub: any, j: number) => (
+                                  <li key={j}>
+                                    <Link
+                                      href={sub.href}
+                                      className=" text-hover text-sm font-light font-rubik text-muted"
+                                    >
+                                      {sub.title}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="p-2">
+                          {item.dropdownItems.map((sub: any, i) => (
+                            <DropdownMenuItem key={i} asChild>
+                              <Link
+                                href={sub.href}
+                                className="text-sm font-light font-rubik text-hover text-muted"
+                              >
+                                {sub.title}
+                              </Link>
+                            </DropdownMenuItem>
+                          ))}
+                        </div>
+                      )}
+                    </DropdownMenuSubContent>
+                  </DropdownMenuSub>
+                ) : (
+                  <DropdownMenuItem
+                    key={i}
+                    asChild
+                    className="flex w-full justify-start items-center border-b border-color py-4 last:border-none"
+                  >
+                    <Link
+                      href={item.href}
+                      className="block w-full text-[13px] font-rubik text-hover hover:cursor-pointer"
+                    >
+                      <ul className="list-disc pl-5">
+                        <li className="text-sm font-light font-rubik  text-muted ">
+                          {item.title}
+                        </li>
+                      </ul>
+                    </Link>
+                  </DropdownMenuItem>
+                )
+              )}
+            </motion.div>
+          </DropdownMenuContent>
+        </AnimatePresence>
+      </DropdownMenu>
+    </div>
+  );
+}
