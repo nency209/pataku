@@ -8,41 +8,45 @@ export default function NavigationIndex() {
   const segments = pathname.split("/").filter(Boolean);
 
   return (
-    <div className="w-full bg-surface flex items-center justify-evenly px-8 py-10">
-      {/* Left side - Breadcrumbs */}
-      <div>
-        <ol className="flex items-center text-gray-600">
-          <li>
-            <Link href="/" className="hover:text-black">
-              Home
-            </Link>
-          </li>
+    <div className="w-full relative h-[140px] sm:h-[180px] md:h-[215px]">
+      {/* Background Banner */}
+      <Image
+        src="/img/breadcrumb-bg.jpg"
+        alt="breadcrumb banner"
+        fill
+        className="object-cover"
+        priority
+      />
 
-          {segments.map((segment, index) => {
-            const href = "/" + segments.slice(0, index + 1).join("/");
-            const label = segment.charAt(0).toUpperCase() + segment.slice(1);
+      {/* Overlay content */}
+      <div className="absolute inset-0 flex items-center justify-center px-4">
+        <div className="w-full max-w-6xl mx-auto">
+          <ol className="flex flex-wrap items-center text-xs sm:text-sm md:text-base text-muted font-light font-rubik">
+            <li>
+              <Link href="/" className="hover:text-black">
+                Home
+              </Link>
+            </li>
 
-            return (
-              <li key={href} className="flex items-center space-x-2 ml-2">
-                <span>/</span>
-                <Link href={href} className="text-black">
-                  {label}
-                </Link>
-              </li>
-            );
-          })}
-        </ol>
-      </div>
+            {segments.map((segment, index) => {
+              const href = "/" + segments.slice(0, index + 1).join("/");
+              const label =
+                segment.charAt(0).toUpperCase() + segment.slice(1);
 
-      {/* Right side - Image */}
-      <div className="relative h-24 w-1/3">
-        <Image
-          src="/img/slider1.jpg"
-          alt="promotional banner"
-          fill
-          className="object-cover"
-          priority
-        />
+              return (
+                <li key={href} className="flex items-center ml-1 sm:ml-2">
+                  <span className="mx-1 sm:mx-2">/</span>
+                  <Link
+                    href={href}
+                    className="text-black text-xs sm:text-sm md:text-base font-light font-rubik"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
       </div>
     </div>
   );

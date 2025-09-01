@@ -1,8 +1,4 @@
-export interface FeaturedCategoryItem {
-  name: string;
-  image: string;
-  description: string[] | string;
-}
+import { FeaturedCategoryItem } from "@/types/FeaturedCategories";
 
 export const featuredCategories: FeaturedCategoryItem[] = [
   { name: 'FURNITURE', image: '/img/category_1.jpg', description: ['Featured', 'Furniture', 'Table', 'Chair'] },

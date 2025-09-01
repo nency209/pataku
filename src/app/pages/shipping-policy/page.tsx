@@ -1,16 +1,11 @@
-import ShippingPolicy from "@/components/sections/shipping_policy";
-import SizeChart from "@/components/sections/SizeChart";
-import { NavigationIndex,Header,Footer } from "@/layout";
+import ShippingPolicy from "@/components/pages/shipping_policy";
+import SizeChart from "@/components/pages/SizeChart";
+import { NavigationIndex } from "@/layout";
 
-
-export default function LoginHome()
-{
-  return(
+export default function LoginHome() {
+  return (
     <main className="min-h-screen">
-      <Header/>
-  <NavigationIndex/>
- <ShippingPolicy/>
-  <Footer/>
+      <ShippingPolicy />
     </main>
-  )
+  );
 }

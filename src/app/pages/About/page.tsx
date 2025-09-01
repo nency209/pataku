@@ -1,16 +1,11 @@
-import About from "@/components/sections/about";
+import About from "@/components/pages/about";
 
-import { NavigationIndex,Header,Footer } from "@/layout";
+import { NavigationIndex } from "@/layout";
 
-
-export default function LoginHome()
-{
-  return(
+export default function LoginHome() {
+  return (
     <main className="min-h-screen">
-      <Header/>
-  <NavigationIndex/>
-<About/>
-  <Footer/>
+      <About />
     </main>
-  )
+  );
 }

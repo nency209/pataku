@@ -4,8 +4,8 @@ import { HomefeaturedCategories } from "@/constants";
 export default function FeaturedCategories() {
   
   return (
-    <section className="py-8 md:py-16 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-8 bg-white">
+      <div className="mx-auto xl:max-w-6xl lg:max-w-4xl md:max-w-2xl px-4 sm:px-6 lg:px-0">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-[32px] font-bold font-lato text-black mb-2">
             Featured <span className="italic text-[32px] font-light font-lato text-black">Categories</span>
@@ -24,7 +24,7 @@ export default function FeaturedCategories() {
             fill
             className="object-contain bg-white hover:cursor-pointer "
           />
-          <p className="absolute bottom-4 left-4 text-black font-rubik font-light text-[22px] hover:cursor-pointer text-hover">
+          <p className="absolute bottom-4 xl:left-4 lg:left-6 md:left-24 left-16 text-black font-rubik font-light text-[22px] hover:cursor-pointer text-hover">
             {HomefeaturedCategories [0].name}
           </p>
         </div>

@@ -1,15 +1,10 @@
-import SizeChart from "@/components/sections/SizeChart";
-import { NavigationIndex,Header,Footer } from "@/layout";
+import SizeChart from "@/components/pages/SizeChart";
+import { NavigationIndex } from "@/layout";
 
-
-export default function LoginHome()
-{
-  return(
+export default function LoginHome() {
+  return (
     <main className="min-h-screen">
-      <Header/>
-  <NavigationIndex/>
- <SizeChart/>
-  <Footer/>
+      <SizeChart />
     </main>
-  )
+  );
 }

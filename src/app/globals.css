@@ -16,15 +16,19 @@
   /* Header  */
   --header-bg: #f4f4f4;
   --header-text: #727272;
-  --header-menu-hover-color: #727272;
+  --header-menu-hover-color: #cea45f;
+  --header2-bg:#ffffff;
 
   /* navbar*/
   --navbar-bg: #ffffff;
   --navbar-text-color: #222222;
   --navbar-text-hover-color:#cea45f;
+  --bg-browser:#222222;
 
   /* hero */
   --hero-bg:#F2F3F7;
+  --browser-sidebar:#232323;
+  --browser-text:#ffffff;
 
 
    /* card */
@@ -32,6 +36,7 @@
   --primary-color: #cea45f;
   --text-muted: #727272;
   --border-color: #ededed;
+  --browser-border:#cea45f;
 
   --rubik-font:Rubik, sans-serif;
   --lato-font:Lato, sans-serif
@@ -48,6 +53,11 @@
   --navbar-bg: #369599;
   --navbar-text-color: #ffffff;
   --navbar-text-hover-color:#232323;
+  --browser-sidebar:#ffffff;
+  --bg-browser:#ffffff;
+   --browser-text:#232323;
+   --browser-border:#ffffff;
+
 }
 
 .theme-home3 {
@@ -55,9 +65,26 @@
   --header-bg: #85b839;
   --header-text: #ffffff;
   --header-menu-hover-color: #232323;
+  --browser-sidebar:#85b839;
+  --bg-browser:#85b839;
+  --browser-text:#ffffff;
+  --browser-border:#85b839;
+  
+  
+
 }
 
 .theme-home4 {
+  --primary-color:#8AABCA;
+  --navbar-bg: #8AABCA;
+  --navbar-text-color: #ffffff;
+  --navbar-text-hover-color:#232323;
+  --browser-sidebar:#ffffff;
+  --border-color: #ffffff;
+  --header2-bg:#8AABCA;
+  --header-bg: #8AABCA;
+   --header-text: #ffffff;
+
 }
 
 
@@ -71,7 +98,7 @@
   .btn-banner-bg {
     background-color:var(--banner-button-bg);
   }
-  .border-color {
+  .btn-border-color {
     border-color:var(--banner-btn-border);
   }
 
@@ -79,6 +106,10 @@
   .bg-header {
     background-color:var(--header-bg);
   }
+
+   .bg-header2{
+    background-color:var(--header2-bg);
+  } 
   .header-text {
     color:var(--header-text);
   }
@@ -91,6 +122,19 @@
   {
      background-color:var(--navbar-bg);
   }
+  .bg-browser
+  {
+    background-color:var(--bg-browser)
+  }
+  .browser-border
+  {
+    
+    border-color:var(--browser-border)
+  }
+  .text-browser
+  {
+    color:var(--browser-text)
+  }
   .navbar-text
   {
     color:var(--navbar-text-color)
@@ -100,16 +144,22 @@
     color:var(--navbar-text-hover-color)
   }
 
+
   /* hero */
   .bg-hero
   {
     background-color:var(--hero-bg)
   }
+  .bg-browser
+  {
+    background-color: var(--browser-sidebar);
+  }
 
   /* common */
-  .bg-hover:hover {
+  .bg-primary-hover:hover {
     background-color:var(--primary-color);
   }
+
   .bg-primary 
   {
     background-color:var(--primary-color);

@@ -1,4 +1,24 @@
-import { NavigationItem } from "@/types";
+import { NavigationItem ,AccountOption,CurrencyOption} from "@/types";
+
+
+export const accountOptions: AccountOption[] = [
+  { label: "Login", href: "/login" },
+  { label: "Register", href: "/Register" },
+  { label: "Wishlist", href: "/wishlist" },
+  { label: "Cart", href: "/cart" },
+];
+
+export const currencyOptions: CurrencyOption[] = [
+  { name: "USD - US Dollar", },
+  { name: "EUR - Euro",  },
+  { name: "GBP - British Pound",},
+  { name: "INR - Indian Rupee", },
+  { name: "BDT - Bangladesh Taka",},
+  { name: "JPY - Japan Yen", },
+  { name: "CAD - Canada Dollar",  },
+  { name: "AUD - Australian Dollar", }
+];
+
 
 export const navigationItems: NavigationItem[] = [
   {
@@ -24,10 +44,10 @@ export const navigationItems: NavigationItem[] = [
           { title: "New and sale badge", href: "/shop/new-sale", badge: "New" },
           { title: "Product with video", href: "/shop/video", badge: "Video" },
           { title: "New badge product", href: "/shop/new-badge", badge: "New" },
-          { title: "Variable product", href: "/shop/variable" },
+          { title: "Variable product", href: "/shop/Variable-product" },
           {
-            title: "Soldout product",
-            href: "/shop/soldout",
+            title: "Soldout-product",
+            href: "/shop/Soldout-product",
             badge: "Sold Out",
           },
         ],
@@ -35,23 +55,23 @@ export const navigationItems: NavigationItem[] = [
       {
         group: "Collection 02",
         items: [
-          { title: "Simple product", href: "/shop/simple" },
+          { title: "Simple product", href: "/shop/simpleproduct" },
           {
-            title: "Variable with soldout",
-            href: "/shop/variable-soldout",
+            title: "Variable-With-Soldout",
+            href: "/shop/VariableWithSoldout",
             badge: "Sold Out",
           },
           {
             title: "Sample affiliate product",
-            href: "/shop/affiliate",
+            href: "/shop/Sample-affiliate-product",
             badge: "Affiliate",
           },
           {
             title: "Countdown product",
-            href: "/shop/countdown",
+            href: "/shop/Countdown-Product",
             badge: "Countdown",
           },
-          { title: "Without shortcode", href: "/shop/without-shortcode" },
+          { title: "Without shortcode", href: "/shop/Withoutshortcode" },
         ],
       },
       {
@@ -59,17 +79,17 @@ export const navigationItems: NavigationItem[] = [
         items: [
           {
             title: "Sample affiliate product",
-            href: "/shop/affiliate2",
+            href: "/shop/Sampleaffiliateproduct",
             badge: "Affiliate",
           },
-          { title: "Demo product title", href: "/shop/demo1" },
+          { title: "Demo product title", href: "/shop/Demo-product-title" },
           {
             title: "Countdown product",
-            href: "/shop/countdown2",
+            href: "/shop/Countdown-Product",
             badge: "Countdown",
           },
-          { title: "Demo product title", href: "/shop/demo2" },
-          { title: "Product with video", href: "/shop/video2", badge: "Video" },
+          { title: "Demo product title", href: "/shop/Demoproducttitle" },
+          { title: "Product with video", href: "/shop/video", badge: "Video" },
         ],
       },
     ],
@@ -79,27 +99,27 @@ export const navigationItems: NavigationItem[] = [
     href: "/product",
     hasDropdown: true,
     dropdownItems: [
-      { title: "New and sale badge", href: "/shop/new-sale", badge: "New" },
-      { title: "New badge product", href: "/shop/new-badge", badge: "New" },
-      { title: "Variable product", href: "/shop/variable" },
-      { title: "Soldout product", href: "/shop/soldout", badge: "Sold Out" },
-      { title: "Simple product", href: "/shop/simple" },
+      { title: "New and sale badge", href: "/product/new-sale", badge: "New" },
+      { title: "New badge product", href: "/product/new-badge", badge: "New" },
+      { title: "Variable product", href: "/product/Variable-product" },
+      { title: "Soldout product", href: "/product/Soldout-product", badge: "Sold Out" },
+      { title: "Simple product", href: "/product/Simple-Product" },
       {
         title: "Variable with soldout",
-        href: "/shop/variable-soldout",
+        href: "/product/Variable-With-Soldout",
         badge: "Sold Out",
       },
       {
         title: "Sample affiliate product",
-        href: "/shop/affiliate",
+        href: "/product/Sample-affiliate-product",
         badge: "Affiliate",
       },
       {
         title: "Countdown product",
-        href: "/shop/countdown",
+        href: "/product/Countdown-Product",
         badge: "Countdown",
       },
-      { title: "Without shortcode", href: "/shop/without-shortcode" },
+      { title: "Without shortcode", href: "/product/Withoutshortcode" },
     ],
   },
   {
