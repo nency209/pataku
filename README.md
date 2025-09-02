@@ -1,76 +1,99 @@
-Readme - Pataku Next
-Pataku — Next.js E‑commerce Frontend
+🛍️ Pataku — Next.js E-commerce Frontend
 
-Pataku — A clean, minimal, and modern e-commerce frontend built with Next.js + TypeScript, Tailwind CSS, Redux Toolkit, Formik + Yup, and Framer Motion.
+Pataku — A clean, minimal, and modern e-commerce frontend built with:
 
-Project Overview
-
-Pataku is a frontend-only e-commerce demo app with a focus on
-
-fast UI using Next.js (App Router or Pages Router depending on your preference),
-
-predictable state via Redux Toolkit,
-
-great DX on forms using Formik + Yup,
-
-smooth micro-interactions with Framer Motion,
-
-utility-first styling with Tailwind, and
-
-full TypeScript support.
-
-for payment Razorpay
-
-The project ships with sample navigation, products, a mini-cart, and a header search with suggestions.
-
-Tech Stack
-
-Next.js (13+ — App Router or Pages Router)
-
-TypeScript
+Next.js + TypeScript
 
 Tailwind CSS
 
-Redux Toolkit (with RTK Query optional)
+Redux Toolkit
 
-Formik + Yup for forms & validation
+Formik + Yup
 
-Framer Motion for animations
+Framer Motion
 
-ESLint + Prettier (recommended)
+Includes Cart, Wishlist, and Razorpay Payment Integration.
 
+🚀 Project Overview
 
-Quick Start
+Pataku is a frontend-only e-commerce demo app focused on:
 
-Clone the repo
+✅ Fast UI rendering with Next.js
+✅ Predictable state via Redux Toolkit
+✅ Smooth forms with Formik + Yup
+✅ Micro-interactions using Framer Motion
+✅ Utility-first styling with Tailwind CSS
+✅ Full TypeScript support
+✅ Integrated Cart, Wishlist, Razorpay Checkout
 
-git clone  pataku
+The project includes:
+
+Navigation bar with dropdowns
+
+Product listing & product detail pages
+
+Mini-cart & wishlist system
+
+Razorpay integration for payments
+
+Header search with live suggestions
+
+🛠️ Tech Stack
+
+⚡ Next.js (13+ — App Router / Pages Router)
+
+🔷 TypeScript
+
+🎨 Tailwind CSS
+
+🗂️ Redux Toolkit (with optional RTK Query)
+
+📝 Formik + Yup (forms & validation)
+
+🎞️ Framer Motion (animations)
+
+🧹 ESLint + Prettier
+
+⚡ Quick Start
+# 1️⃣ Clone the repository
+git clone https://github.com/your-username/pataku.git
 cd pataku
 
-Install dependencies
-
-# using npm
+# 2️⃣ Install dependencies
 npm install
-# or using yarn
+# or
 yarn
 
-Run dev server
-
+# 3️⃣ Run development server
 npm run dev
 # or
 yarn dev
 
-Open http://localhost:3000
+# 4️⃣ Open the app
+http://localhost:3000
 
-Environment Variables
+🔑 Environment Variables
 
-Create a .env.local in the project root (do not commit this file). Typical variables:
+Create a .env.local file in the project root (⚠️ do not commit).
 
-
-
+# Razorpay
 RAZORPAY_KEY_ID=""
 RAZORPAY_KEY_SECRET=""
 NEXT_PUBLIC_RAZORPAY_KEY_ID=""
+
+# Google Maps (if needed)
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=""
 
-The example uses frontend-only features; if you connect to a real backend or payment gateway, add the required keys here.
+📦 Features
+
+🛒 Cart Management (Add, remove, update items)
+
+❤️ Wishlist (Save favorite products)
+
+💳 Razorpay Integration (Checkout & payment flow)
+
+🔍 Header Search with Suggestions
+
+🎨 Responsive UI with Tailwind CSS
+
+⚡ Framer Motion Animations
