@@ -7,9 +7,9 @@ import RelatedProduct from "@/components/shop/RelatedProduct";
 import ProductTabs from "@/components/shop/ProductTabs";
 import { Footer, Header, NavigationIndex } from "@/layout";
 
-interface PageProps {
+type PageProps = {
   params: { slug: string };
-}
+};
 
 // ✅ generateMetadata runs on server
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
