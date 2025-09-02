@@ -1,7 +1,7 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    strictNextHead: true,
+    
   },
 };
 

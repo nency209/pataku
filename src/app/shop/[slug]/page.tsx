@@ -7,12 +7,14 @@ import RelatedProduct from "@/components/shop/RelatedProduct";
 import ProductTabs from "@/components/shop/ProductTabs";
 import { Footer, Header, NavigationIndex } from "@/layout";
 
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
 
-type Props = {
-  params: { slug: string };
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+// ✅ generateMetadata should use `PageProps`
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const product = productsdetail.find((p) => p.slug === params.slug);
 
   if (!product) {
@@ -23,9 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: product.name, 
+    title: product.name,
     description: product.description || `Buy ${product.name} at best price.`,
-    keywords: [product.name,  "pataku", "shopping"],
+    keywords: [product.name, "pataku", "shopping"],
     openGraph: {
       title: product.name,
       description: product.description,
@@ -47,8 +49,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-
-export default function NewSaleProductPage({ params }: Props) {
+// ✅ page component uses same `PageProps`
+export default function NewSaleProductPage({ params }: PageProps) {
   return (
     <main className="min-h-screen bg-white">
       <Header />
@@ -63,12 +65,11 @@ export default function NewSaleProductPage({ params }: Props) {
         "
         >
           <BrowseCategories />
-
           <Navbar />
         </div>
       </div>
       <NavigationIndex />
-      <ProductDetail slug={params.slug}/>
+      <ProductDetail slug={params.slug} />
       <ProductTabs />
       <RelatedProduct />
       <CustomeCollection />
