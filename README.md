@@ -1,104 +1,76 @@
-# Responsive E-commerce Furniture Website
+Readme - Pataku Next
+Pataku — Next.js E‑commerce Frontend
 
-A modern, fully responsive e-commerce website built with Next.js, TypeScript, and Tailwind CSS. Features a clean design with proper UI components and mobile-first approach.
+Pataku — A clean, minimal, and modern e-commerce frontend built with Next.js + TypeScript, Tailwind CSS, Redux Toolkit, Formik + Yup, and Framer Motion.
 
-## Features
+Project Overview
 
-- **Fully Responsive Design**: Works perfectly on mobile, tablet, and desktop
-- **Modern UI Components**: Built with reusable button, Card, and Badge components
-- **Interactive Elements**: Hover effects, mobile menu, and smooth transitions
-- **Product Showcase**: Featured categories, new arrivals, deals, and popular products
-- **Blog Section**: Blog post previews with cards
-- **Comprehensive Footer**: Contact information, social links, and newsletter signup
+Pataku is a frontend-only e-commerce demo app with a focus on
 
-## Sections Included
+fast UI using Next.js (App Router or Pages Router depending on your preference),
 
-1. **Header**: Responsive navigation with mobile menu
-2. **Hero Section**: Main banner with call-to-action
-3. **Featured Categories**: Four main product categories
-4. **New Arrivals**: Grid of new products with badges
-5. **Promotional Banner**: Melbourne furniture maker message
-6. **Deals & Popular Products**: Two-column layout with countdown timers
-7. **Living Room Banner**: Promotional section with discount
-8. **Top Selling Products**: Three featured products
-9. **Blog Posts**: Three blog post previews
-10. **Footer**: Complete footer with multiple sections
+predictable state via Redux Toolkit,
 
-## UI Components
+great DX on forms using Formik + Yup,
 
-- **button**: Multiple variants (default, black, white, ghost, link)
-- **Card**: For structured content display
-- **Badge**: For product status indicators (SALE, NEW, SOLD OUT)
+smooth micro-interactions with Framer Motion,
 
-## Technologies Used
+utility-first styling with Tailwind, and
 
-- **Next.js 15**: React framework
-- **TypeScript**: Type safety
-- **Tailwind CSS**: Utility-first CSS framework
-- **Class Variance Authority**: For component variants
-- **Radix UI**: Accessible UI primitives
+full TypeScript support.
 
-## Getting Started
+for payment Razorpay
 
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+The project ships with sample navigation, products, a mini-cart, and a header search with suggestions.
 
-2. **Run the development server**:
-   ```bash
-   npm run dev
-   ```
+Tech Stack
 
-3. **Open your browser** and navigate to `http://localhost:3000`
+Next.js (13+ — App Router or Pages Router)
 
-## Project Structure
+TypeScript
 
-```
-src/
-├── app/
-│   ├── components/
-│   │   ├── Header.tsx          # Responsive navigation
-│   │   ├── Hero.tsx            # Main banner
-│   │   ├── FeaturedCategories.tsx
-│   │   ├── NewArrivals.tsx
-│   │   ├── PromotionalBanner.tsx
-│   │   ├── BottomSections.tsx
-│   │   ├── LivingRoomBanner.tsx
-│   │   ├── TopSellingProducts.tsx
-│   │   ├── BlogPosts.tsx
-│   │   ├── Footer.tsx
-│   │   └── ProductCard.tsx     # Reusable product component
-│   ├── layout.tsx
-│   └── page.tsx                # Main page
-├── components/
-│   └── ui/                     # Reusable UI components
-│       ├── button.tsx
-│       ├── card.tsx
-│       └── badge.tsx
-└── lib/
-    └── utils.ts                # Utility functions
-```
+Tailwind CSS
 
-## Responsive Breakpoints
+Redux Toolkit (with RTK Query optional)
 
-- **Mobile**: < 640px
-- **Tablet**: 640px - 1024px
-- **Desktop**: > 1024px
+Formik + Yup for forms & validation
 
-## Customization
+Framer Motion for animations
 
-The website is built with a modular component structure, making it easy to:
-- Add new sections
-- Modify existing components
-- Change colors and styling
-- Add new product data
-- Integrate with a backend API
+ESLint + Prettier (recommended)
 
-## Browser Support
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+Quick Start
+
+Clone the repo
+
+git clone  pataku
+cd pataku
+
+Install dependencies
+
+# using npm
+npm install
+# or using yarn
+yarn
+
+Run dev server
+
+npm run dev
+# or
+yarn dev
+
+Open http://localhost:3000
+
+Environment Variables
+
+Create a .env.local in the project root (do not commit this file). Typical variables:
+
+
+
+RAZORPAY_KEY_ID=""
+RAZORPAY_KEY_SECRET=""
+NEXT_PUBLIC_RAZORPAY_KEY_ID=""
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=""
+
+The example uses frontend-only features; if you connect to a real backend or payment gateway, add the required keys here.
