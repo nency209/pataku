@@ -56,7 +56,7 @@ Header search with live suggestions
 
 ⚡ Quick Start
 # 1️⃣ Clone the repository
-git clone https://github.com/your-username/pataku.git
+git clone 
 cd pataku
 
 # 2️⃣ Install dependencies
