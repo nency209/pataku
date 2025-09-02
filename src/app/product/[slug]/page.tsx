@@ -7,11 +7,12 @@ import RelatedProduct from "@/components/shop/RelatedProduct";
 import ProductTabs from "@/components/shop/ProductTabs";
 import { Footer, Header, NavigationIndex } from "@/layout";
 
-type Props = {
+interface PageProps {
   params: { slug: string };
-};
+}
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+// ✅ generateMetadata runs on server
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const product = productsdetail.find((p) => p.slug === params.slug);
 
   if (!product) {
@@ -22,52 +23,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: product.name, 
+    title: product.name,
     description: product.description || `Buy ${product.name} at best price.`,
-    keywords: [product.name,  "pataku", "shopping"],
     openGraph: {
-      title: product.name,
-      description: product.description,
-      images: [
-        {
-          url: product.image,
-          width: 600,
-          height: 600,
-          alt: product.name,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: product.name,
-      description: product.description,
-      images: [product.image],
+      images: [{ url: product.image }],
     },
   };
 }
 
-
-export default function NewSaleProductPage({ params }: Props) {
+// ✅ main page component
+export default function ProductPage2({ params }: PageProps) {
   return (
     <main className="min-h-screen bg-white">
       <Header />
       <div className="sticky top-0 z-50 bg-white border-t border-color">
-        <div
-          className="
-          grid 
-          grid-cols-1 
-          gap-6 
-          lg:grid-cols-[0.5fr_1fr] lg:items-center lg:justify-start
-          xl:grid-cols-[1.2fr_2.3fr]
-        "
-        >
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[0.5fr_1fr] xl:grid-cols-[1.2fr_2.3fr]">
           <BrowseCategories />
-
           <Navbar />
         </div>
       </div>
       <NavigationIndex />
-      <ProductDetail slug={params.slug}/>
+      <ProductDetail slug={params.slug} />
       <ProductTabs />
       <RelatedProduct />
       <CustomeCollection />
