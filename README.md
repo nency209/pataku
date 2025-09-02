@@ -12,6 +12,8 @@ Formik + Yup
 
 Framer Motion
 
+shadcn ui
+
 Includes Cart, Wishlist, and Razorpay Payment Integration.
 
 🚀 Project Overview
