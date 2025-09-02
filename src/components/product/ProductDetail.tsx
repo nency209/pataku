@@ -12,8 +12,9 @@ import { useAppDispatch } from "@/redux/hook";
 import { addToCart } from "@/redux/cartslice";
 import { addToWishlist } from "@/redux/wishlistslice";
 
-export default function ProductPage({ slug }: { slug: string }) {
-  
+export default function ProductPage() {
+  const params = useParams<{ slug: string }>();
+const slug = params.slug;
   const router = useRouter();
   const products = productsdetail;
 

@@ -54,13 +54,13 @@ export default function TopSellingProducts() {
                   className="w-1/2 sm:w-1/3 md:w-1/4 flex-shrink-0 px-2"
                 >
                   <ProductCard
-                   slug={product.slug}
+                    slug={product.slug}
                     name={product.name}
                     price={product.price}
                     badges={product.badges}
                     discount={product.discount}
                     image={product.image}
-                    originalPrice={product.originalPrice}
+                    oldprice={product.oldprice}
                   />
                 </div>
               ))}
