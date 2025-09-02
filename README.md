@@ -74,7 +74,7 @@ http://localhost:3000
 
 🔑 Environment Variables
 
-Create a .env.local file in the project root (⚠️ do not commit).
+Create a .env.local file in the project root .
 
 # Razorpay
 RAZORPAY_KEY_ID=""
