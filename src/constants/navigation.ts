@@ -133,7 +133,7 @@ export const navigationItems: NavigationItem[] = [
       { title: "About", href: "/pages/about" },
     ],
   },
-  { title: "BLOG", href: "/blog" },
-  { title: "CONTACT", href: "/contact" },
+  { title: "BLOG", href: "/Blog" },
+  { title: "CONTACT", href: "/Contact" },
 ];
 

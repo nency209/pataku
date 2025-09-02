@@ -385,7 +385,7 @@ const slug = params.slug;
                     View Cart
                   </button>
                   <button
-                    onClick={() => router.push("/checkout")}
+                    onClick={() => router.push("/Checkout")}
                     className="px-4 py-2 bg-black text-white"
                   >
                     Checkout

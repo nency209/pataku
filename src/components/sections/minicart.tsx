@@ -54,7 +54,7 @@ export default function MiniCart({ onClose }: { onClose: () => void }) {
 
           <div className="mt-4 flex gap-2">
             <Link
-              href="/checkout"
+              href="/Checkout"
               className="flex-1 text-center py-2 border rounded hover:bg-gray-100"
             >
               Checkout
