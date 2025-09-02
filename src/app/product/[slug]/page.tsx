@@ -29,7 +29,7 @@ export default function NewSaleProductPage() {
         </div>
       </div>
       <NavigationIndex />
-      {/* <ProductDetail /> */}
+      <ProductDetail />
       <ProductTabs />
       <RelatedProduct />
       <CustomeCollection />
